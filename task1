@@ -1,0 +1,10 @@
+def max_digits_not_dividable_by_3(n):
+    max_digit = 0
+    while n > 0:
+        current = n % 10
+        if current > max_digit and current % 3 != 0:
+            max_digit = current
+        n //= 10
+    return max_digit
+
+
