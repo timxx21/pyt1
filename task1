@@ -14,4 +14,26 @@ def mutual_simple(n):
             count += 1
     return count
 
+def find_max(n):
+    max_simple = 0
+    min_divider = 2
+    while min_divider <= n:
+        if n % min_divider == 0:
+            break
+        min_divider += 1
+    sum_of_digits = 0
+    while n > 0:
+        digit = n % 10
+        if digit < 5:
+            sum_of_digits += digit
+        if digit > max_simple and digit % min_divider != 0:
+            max_simple  = digit
+        n //= 10
+    print(max_simple)
+    print(sum_of_digits)
+    return max_simple * sum_of_digits
+
+
+test = 126
+print(find_max(test))
 
