@@ -14,3 +14,21 @@ def count_vowels_consonants(string):
 strings = input("Введите список строк через пробел: ").split()
 strings.sort(key=count_vowels_consonants)
 print(strings)
+
+#Задание 12
+def frequency_deviation(string):
+    char_count = {}
+    for char in string:
+        if char in char_count:
+            char_count[char] += 1
+        else:
+            char_count[char] = 1
+    max_frequency = max(char_count.values())
+    deviation = 0
+    for count in char_count.values():
+        deviation += (count - max_frequency) ** 2
+    return deviation
+
+strings = input("Введите список строк через пробел: ").split()
+strings.sort(key=frequency_deviation)
+print(strings)
