@@ -1,0 +1,16 @@
+#Задание 11
+def count_vowels_consonants(string):
+    vowels = "aeiou"
+    consonants = "bcdfghjklmnpqrstvwxyz"
+    vowel_count = 0
+    consonant_count = 0
+    for char in string:
+        if char.lower() in vowels:
+            vowel_count += 1
+        elif char.lower() in consonants:
+            consonant_count += 1
+    return consonant_count - vowel_count
+
+strings = input("Введите список строк через пробел: ").split()
+strings.sort(key=count_vowels_consonants)
+print(strings)
