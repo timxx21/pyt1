@@ -17,17 +17,19 @@ def elements_between_max1_max2(arr):
 print("Выберите задачу для решения:")
 print("15. Убывающая последовательность")
 print("16. Первое и второе максимальное")
-print("17. Найти количество чисел в строке больше 5")
+print("17. Первое и последнее максимальное")
 print("18. Количество неиспользованных в строке символов латиницы")
 print("19. Найти количество чисел в строке больше 5")
 
 choice = input("Введите номер задачи: ")
 if choice == "15":
-  arr1 = input("Введите массив в одну строку).split()
-  result1 = descending_indices(arr1)
-  print(result1)
+    arr = input("Введите массив в одну строку").split()
+    result = descending_indices(arr)
+    print(result)
 elif choice == "16":
-   
+    arr = input("Введите массив в одну строку").split()
+    result = elements_between_max1_max2(arr)
+    print(result)
 elif choice == "17":
    
 elif choice == "18":
