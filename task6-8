@@ -28,7 +28,7 @@ print("Незадействованные символы латиницы:", unu
 
 #Задание8
 
-def count_numbers_less_than_5(string):
+def count_numbers_greater_than_5(string):
     numbers = string.split()
     count = 0
     for number in numbers:
