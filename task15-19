@@ -1,0 +1,38 @@
+def descending_indices(arr):
+    sorted_indices = sorted(range(len(arr)), key=lambda x: arr[x], reverse=True)
+    return sorted_indices
+
+    
+def elements_between_max1_max2(arr):
+    max1 = max(arr)
+    m1_index = arr.index(max1)
+    arr.remove(max1)
+    max2 = max(arr)
+    arr.insert(m1_index, max1)
+    min_index = min(arr.index(max1), arr.index(max2))
+    max_index = max(arr.index(max1), arr.index(max2))
+    result = arr[min_index+1:max_index]
+    return result
+
+print("Выберите задачу для решения:")
+print("15. Убывающая последовательность")
+print("16. Первое и второе максимальное")
+print("17. Найти количество чисел в строке больше 5")
+print("18. Количество неиспользованных в строке символов латиницы")
+print("19. Найти количество чисел в строке больше 5")
+
+choice = input("Введите номер задачи: ")
+if choice == "15":
+  arr1 = input("Введите массив в одну строку).split()
+  result1 = descending_indices(arr1)
+  print(result1)
+elif choice == "16":
+   
+elif choice == "17":
+   
+elif choice == "18":
+   
+elif choice == "19":
+  
+else:
+    print("Неверный выбор")
