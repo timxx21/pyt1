@@ -13,16 +13,33 @@ else:
 def count_words(string): 
     words = string.split()
     return len(words)
-    
-string = "Заходят три программиста в бар..."
-word_count = count_words(string)
-print("Количество слов в строке:", word_count)
+
 
 #Задание 4 
 def count_unique_digits(number):
     digits = set(str(number))
     return len(digits)
 
-number = 34223421
-digit_count = count_unique_digits(number)
-print("Количество различных цифр в числе:", digit_count)
+
+ print("Выберите задачу для решения:")
+    print("2. Проверить строку на палиндром")
+    print("3. Количество слов в строке")
+    print("4. Количество разных цифр в числе")
+
+choice = input("Введите номер задачи: ")
+if choice == "2":
+    string = input()
+    if is_palindrome(string):
+        print("Строка является палиндромом")
+    else:
+        print("Строка не является палиндромом")
+elif choice == "3":
+    string = input()
+    word_count = count_words(string)
+    print("Количество слов в строке:", word_count)
+elif choice == "4":
+    number = input()
+    digit_count = count_unique_digits(number)
+    print("Количество различных цифр в числе:", digit_count)
+else:
+    print("Неверный выбор")
