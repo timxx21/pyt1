@@ -1,0 +1,12 @@
+#Задание6 
+def count_numbers_less_than_5(string):
+    numbers = string.split()
+    count = 0
+    for number in numbers:
+        if number.isdigit() and int(number) < 5:
+            count += 1
+    return count
+
+string = "3 5 9 23 1 2"
+number_count = count_numbers_less_than_5(string)
+print("Количество чисел меньше 5:", number_count)
