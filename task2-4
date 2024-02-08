@@ -1,3 +1,4 @@
+#Задание 2
 def is_palindrome(string):
     string = string.lower().replace(" ", "")
     return string == string[::-1]
@@ -7,3 +8,12 @@ if is_palindrome(string):
     print("Строка является палиндромом")
 else:
     print("Строка не является палиндромом")
+
+#Задание 3
+def count_words(string): 
+    words = string.split()
+    return len(words)
+    
+string = "Заходят три программиста в бар..."
+word_count = count_words(string)
+print("Количество слов в строке:", word_count)
