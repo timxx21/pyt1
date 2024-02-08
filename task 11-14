@@ -11,9 +11,7 @@ def count_vowels_consonants(string):
             consonant_count += 1
     return consonant_count - vowel_count
 
-strings = input("Введите список строк через пробел: ").split()
-strings.sort(key=count_vowels_consonants)
-print(strings)
+
 
 #Задание 12
 def frequency_deviation(string):
@@ -29,9 +27,7 @@ def frequency_deviation(string):
         deviation += (count - max_frequency) ** 2
     return deviation
 
-strings = input("Введите список строк через пробел: ").split()
-strings.sort(key=frequency_deviation)
-print(strings)
+
 
 #Задание 13
 def count_combinations(string):
@@ -46,6 +42,46 @@ def count_combinations(string):
             consonant_vowel_count += 1
     return vowel_consonant_count - consonant_vowel_count
 
-strings = input("Введите список строк через пробел: ").split()
-strings.sort(key=count_combinations)
-print(strings)
+
+
+
+def max_ascii_weight_deviation(string):
+    max_weight = 0
+    for i in range(len(string) - 2):
+        weight = ord(string[i]) + ord(string[i + 1]) + ord(string[i + 2])
+        if weight > max_weight:
+            max_weight = weight
+    variance = 0
+    for i in range(len(string) - 2):
+        weight = ord(string[i]) + ord(string[i + 1]) + ord(string[i + 2])
+        variance += (weight - max_weight) ** 2
+    return variance
+
+
+
+
+print("Выберите задачу для решения:")
+print("11. Сортировка в порядке увеличения разницы между количеством согласных и количеством гласных букв в строке.")
+print("12. Сортировка в порядке увеличения квадратичного отклонения частоты встречаемости самого часто встречаемого в строке символа от частоты его встречаемости в текстах на этом алфавите.")
+print("13. Сортировка в порядке увеличения разницы между количеством сочетаний «гласная-согласная» и «согласная-гласная» в строке.")
+print("14. Сортировка в порядке квадратичного отклонения дисперсии максимального среднего веса ASCII-кода тройки символов в строке от максимального среднего веса ASCII-кода тройки символов в первой строке.")
+
+choice = input("Введите номер задачи: ")
+if choice == "11":
+    strings = input("Введите список строк через пробел: ").split()
+    strings.sort(key=count_vowels_consonants)
+    print(strings)
+elif choice == "12":
+    strings = input("Введите список строк через пробел: ").split()
+    strings.sort(key=frequency_deviation)
+    print(strings)
+elif choice == "13":
+    strings = input("Введите список строк через пробел: ").split()
+    strings.sort(key=count_combinations)
+    print(strings)
+elif choice == "14":
+    strings = input("Введите список строк через пробел: ").split()
+    strings.sort(key=max_ascii_weight_deviation)
+    print(strings)
+else:
+    print("Неверный выбор")
