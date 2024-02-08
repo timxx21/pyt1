@@ -17,3 +17,12 @@ def count_words(string):
 string = "Заходят три программиста в бар..."
 word_count = count_words(string)
 print("Количество слов в строке:", word_count)
+
+#Задание 4 
+def count_unique_digits(number):
+    digits = set(str(number))
+    return len(digits)
+
+number = 34223421
+digit_count = count_unique_digits(number)
+print("Количество различных цифр в числе:", digit_count)
