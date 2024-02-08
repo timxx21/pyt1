@@ -20,6 +20,16 @@ def elements_between_max1_lastmax(arr):
     result = arr[arr.index(max1)+1:last_max]
     return result
 
+def prime_divisors(num):
+    result = []
+    p = 2
+    while num > 1:
+        if num % p == 0:
+            result.append(p)
+            num /= p
+        else:
+            p += 1
+    return result
 
 print("Выберите задачу для решения:")
 print("15. Убывающая последовательность")
@@ -39,13 +49,14 @@ elif choice == "16":
     print(result)
 elif choice == "17":
     arr = input("Введите массив в одну строку").split()
-    result3 = elements_between_max1_lastmax(arr3)
-    print(result3)
+    result3 = elements_between_max1_lastmax(arr)
+    print(result)
 elif choice == "18":
     arr = input("Введите массив в одну строку").split()
     
 elif choice == "19":
-    arr = input("Введите массив в одну строку").split()
-    
+    num = input()
+    result = prime_divisors(num)
+    print(result)
 else:
     print("Неверный выбор")
