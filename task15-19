@@ -31,6 +31,11 @@ def prime_divisors(num):
             p += 1
     return result
 
+def min_even_element(arr):
+    even_nums = [x for x in arr if x % 2 == 0]
+    min_even = min(even_nums)
+    return min_even
+
 print("Выберите задачу для решения:")
 print("15. Убывающая последовательность")
 print("16. Первое и второе максимальное")
@@ -53,7 +58,8 @@ elif choice == "17":
     print(result)
 elif choice == "18":
     arr = input("Введите массив в одну строку").split()
-    
+    result = min_even_element(arr)
+print(result)
 elif choice == "19":
     num = input()
     result = prime_divisors(num)
