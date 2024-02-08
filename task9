@@ -1,0 +1,6 @@
+#Задание9
+
+strings = input("Введите список строк через пробел: ").split()
+strings.sort(key=len)
+print(strings)
+
