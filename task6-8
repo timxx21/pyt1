@@ -1,4 +1,5 @@
-#Задание6 
+    #Задание6 
+
 def count_numbers_less_than_5(string):
     numbers = string.split()
     count = 0
@@ -7,11 +8,7 @@ def count_numbers_less_than_5(string):
             count += 1
     return count
 
-string = "3 5 9 23 1 2"
-number_count = count_numbers_less_than_5(string)
-print("Количество чисел меньше 5:", number_count)
-
-#задание7
+    #задание7
 
 def find_unused_latin_characters(string):
     used_characters = set()
@@ -22,11 +19,7 @@ def find_unused_latin_characters(string):
     unused_characters = all_characters.difference(used_characters)
     return unused_characters
 
-string = "abc efghijklmnopqrstuvwxyz"
-unused_characters = find_unused_latin_characters(string)
-print("Незадействованные символы латиницы:", unused_characters)
-
-#Задание8
+    #Задание8
 
 def count_numbers_greater_than_5(string):
     numbers = string.split()
@@ -36,6 +29,25 @@ def count_numbers_greater_than_5(string):
             count += 1
     return count
 
-string = "3 5 9 23 1 2"
-number_count = count_numbers_less_than_5(string)
-print("Количество чисел меньше 5:", number_count)
+
+
+print("Выберите задачу для решения:")
+print("6. Найти количество чисел в строке меньше 5")
+print("7. Количество неиспользованных в строке символов латиницы")
+print("8. Найти количество чисел в строке больше 5")
+
+choice = input("Введите номер задачи: ")
+if choice == "6":
+    string = input()
+    number_count = count_numbers_less_than_5(string)
+    print("Количество чисел меньше 5:", number_count)
+elif choice == "7":
+    string = input()
+    unused_characters = find_unused_latin_characters(string)
+    print("Незадействованные символы латиницы:", unused_characters)
+elif choice == "8":
+    string = input()
+    number_count = count_numbers_greater_than_5(string)
+    print("Количество чисел больше 5:", number_count)
+else:
+    print("Неверный выбор")
