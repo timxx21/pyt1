@@ -14,6 +14,13 @@ def elements_between_max1_max2(arr):
     result = arr[min_index+1:max_index]
     return result
 
+def elements_between_max1_lastmax(arr):
+    max1 = max(arr)
+    last_max = len(arr) - 1 - arr[::-1].index(max1)
+    result = arr[arr.index(max1)+1:last_max]
+    return result
+
+
 print("Выберите задачу для решения:")
 print("15. Убывающая последовательность")
 print("16. Первое и второе максимальное")
@@ -31,10 +38,14 @@ elif choice == "16":
     result = elements_between_max1_max2(arr)
     print(result)
 elif choice == "17":
-   
+    arr = input("Введите массив в одну строку").split()
+    result3 = elements_between_max1_lastmax(arr3)
+    print(result3)
 elif choice == "18":
-   
+    arr = input("Введите массив в одну строку").split()
+    
 elif choice == "19":
-  
+    arr = input("Введите массив в одну строку").split()
+    
 else:
     print("Неверный выбор")
