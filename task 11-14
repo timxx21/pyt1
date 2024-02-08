@@ -32,3 +32,20 @@ def frequency_deviation(string):
 strings = input("Введите список строк через пробел: ").split()
 strings.sort(key=frequency_deviation)
 print(strings)
+
+#Задание 13
+def count_combinations(string):
+    vowels = "aeiou"
+    consonants = "bcdfghjklmnpqrstvwxyz"
+    vowel_consonant_count = 0
+    consonant_vowel_count = 0
+    for i in range(len(string) - 1):
+        if string[i].lower() in vowels and string[i + 1].lower() in consonants:
+            vowel_consonant_count += 1
+        elif string[i].lower() in consonants and string[i + 1].lower() in vowels:
+            consonant_vowel_count += 1
+    return vowel_consonant_count - consonant_vowel_count
+
+strings = input("Введите список строк через пробел: ").split()
+strings.sort(key=count_combinations)
+print(strings)
