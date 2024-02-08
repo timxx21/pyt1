@@ -1,0 +1,9 @@
+def is_palindrome(string):
+    string = string.lower().replace(" ", "")
+    return string == string[::-1]
+
+string = "saippuakivikauppias"
+if is_palindrome(string):
+    print("Строка является палиндромом")
+else:
+    print("Строка не является палиндромом")
