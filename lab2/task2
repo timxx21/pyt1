@@ -1,0 +1,15 @@
+from collections import Counter     
+
+num_lines = int(input("Введите количество строк "))
+text = []
+for i in range(num_lines):
+    line = input().split()
+    text.extend(line)
+
+word_count = Counter(text)
+max_count = max(word_count.values())
+most_frequent_word = [word for word, count in word_count.items() if count == max_count]
+most_frequent_word.sort()
+
+most_frequent = most_frequent_word[0]
+print("Самое частое слово это ", most_frequent)
